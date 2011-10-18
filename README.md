@@ -7,7 +7,6 @@ This module basically does nothing initially. Other modules should extend the En
 See:
 
 * Node Wrapper (https://github.com/korstiaan/nodewrapper)
-
 * User Wrapper (https://github.com/korstiaan/userwrapper)
 
 Requirements
