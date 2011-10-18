@@ -1,0 +1,6 @@
+name 			= "Entity Base"
+description 	= "Entity Base"
+core 			= "7.x"
+dependencies[] 	= field
+dependencies[] 	= nsautoload
+php 			= 5.3.2
