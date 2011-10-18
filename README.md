@@ -5,7 +5,9 @@ Drupal module which provides a base class which can be used by other modules to 
 This module basically does nothing initially. Other modules should extend the EntityBase\EntityBase class to provide its functionality for a specific entity type.
 
 See:
+
 * Node Wrapper (https://github.com/korstiaan/nodewrapper)
+
 * User Wrapper (https://github.com/korstiaan/userwrapper)
 
 Requirements
