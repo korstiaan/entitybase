@@ -112,6 +112,20 @@ abstract class EntityBase implements EntityInterface
 	abstract protected function getBundleName();
 	
 	/**
+	 * 
+	 * Returns the id of the entity. 
+	 * 
+	 * @see EntityBase.EntityInterface::getId()
+	 * 
+	 * @return	integer|boolean	
+	 */
+	public function getId()
+	{
+		list($id) = entity_extract_ids($this->getEntityType(), $this->getEntity());
+		return $id ? (int)$id : false; 
+	}
+	
+	/**
 	 * Returns all valid fields for this entity.
 	 * 
 	 * These are:
