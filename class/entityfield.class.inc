@@ -67,17 +67,17 @@ class EntityField implements EntityFieldInterface
 	 */
 	protected function getInfo()
 	{
-		
 		$info = field_info_field($this->getName());
 		
 		return array(
 			'name'		=> $this->getName(),
 			'columns'	=> isset($info['columns']) && !empty($info['columns']) ? array_keys($info['columns']) : false,
 			'single'	=> !isset($info['cardinality']) || $info['cardinality'] == 1,
-			'lang'		=> field_language($this->getWrappedEntity()->getEntityType(),$this->getWrappedEntity()->getEntity(),$this->getName(),$this->getWrappedEntity()->getLanguage()),
+			'lang'		=> $this->getWrappedEntity()->getId() 
+							? field_language($this->getWrappedEntity()->getEntityType(),$this->getWrappedEntity()->getEntity(),$this->getName(),$this->getWrappedEntity()->getLanguage())
+							: $this->getWrappedEntity()->getLanguage(),
 			'data'		=> $info,			
 		);
-		
 	}
 	
 	/**
